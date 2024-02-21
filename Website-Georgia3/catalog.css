@@ -1,0 +1,183 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+  }
+  
+  .left-text {
+    text-align: left;
+    color: white;
+  }
+  
+  .left-text h1 {
+    margin: 0;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: Nunito;
+    font-weight: 400; 
+  }
+  .left-text h1 a {
+   color: white;
+   text-decoration: none;
+  }
+  
+  .left-text p {
+    margin: 5px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+ 
+  .navbar a:hover {
+    color: black;
+    background: white;
+   
+    height: 100%;
+  }
+ 
+  /* Style for the shopping cart icon */
+.fa-shopping-cart {
+  color: white;
+  font-size: 20px; /* Adjust the font size as needed */
+  margin-left: 10px; /* Add some spacing between the icon and the last link */
+  margin-top: 10px;
+}
+
+
+  .content {
+    display: none;
+    padding: 20px;
+  }
+  
+  .items-container {
+    padding: 0 20px; /* This will add 20px padding to the left and right */
+  }
+  
+  .grid {
+    max-width: 95%; /* This sets a maximum width for the grid */
+    margin: 0 auto; /* This will center the grid in the items-container */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd; /* Optional: adds a border around each item */
+    padding: 10px;
+    justify-content: space-between; /* This will push the price to the bottom */
+  }
+  
+  .item img {
+    width: 100%; /* This will ensure the image takes up the full width of the .item container */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    object-fit: cover; /* This will ensure that the image covers the area without stretching */
+  }
+  
+  .item p {
+    margin: 5px 0;
+  }
+  
+  /* Show the content for the active tab */
+  .content:target {
+    display: block;
+  }
+  /* ... Your existing CSS ... */
+
+.secondary-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+  
+  .secondary-navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  .secondary-navbar a:hover {
+    color: black;
+    background: white;
+  }
+
+  .hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+  }
+
+  
+  .menu-toggle {
+    display: none;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+    }
+
+    .navbar {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .menu-toggle:checked + .hamburger-menu + .navbar {
+      display: flex;
+    }
+
+    .navbar a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      border-top: 1px solid #eee;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .left-text h1 {
+      font-size: 20px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .secondary-navbar {
+      flex-direction: column;
+    }
+
+    .secondary-navbar a {
+      padding: 10px;
+      text-align: center;
+    }
+  }
